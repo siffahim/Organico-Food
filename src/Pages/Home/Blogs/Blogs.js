@@ -33,10 +33,8 @@ const Blogs = () => {
         <Container>
             <Row>
                 {
-                    blogs.map(blog => <Col sm={3}>
-                        <div className="blog-card"
-                            key={blog.id}
-                        >
+                    blogs.map(blog => <Col sm={3} key={blog.id}>
+                        <div className="blog-card">
                             <img src={blog.img} alt="" />
                             <div className='blgo-content'>
                                 <h3>{blog.count}+</h3>

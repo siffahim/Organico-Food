@@ -2,7 +2,7 @@ $color1:#fff;
 $color2:#ff284f;
 $color3:#fea130;
 $box-shadow:0 0 5px rgb(0,0,0,0.2);
-$btn-padding:10px 13px;
+$btn-padding:8px 13px;
 $radius1:3px;
 $btn-radius:60px;
 $bold:bold;
@@ -96,3 +96,50 @@ $padding1:10px;
     margin-left: 10%;
     border-radius:  0 0 5px 0;
   }
+
+.login-container{
+    box-shadow: 0 0 5px rgb(0,0,0,0.4);
+    text-align: center;
+}
+.icon-content{
+    width: 100%;
+    border: 1px solid rgb(189, 185, 185);
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 30px;
+    background:#fff;
+}
+
+.banking{
+  box-shadow: $box-shadow;
+  padding: 15px 20px;
+  border-radius: $radius1;
+}
+
+.bank-btn{
+  border: none;
+  display: inline-block;
+  padding: $btn-padding;
+  background-color: $color2;
+  color: $color1;
+  border-radius:3px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 9999;
+}
+.bank-btn::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: $color3;
+   border-radius:3px;
+   transition: 0.4s;
+    z-index: -9999;
+}
+.bank-btn:hover.bank-btn::before{
+  width: 100%;
+}

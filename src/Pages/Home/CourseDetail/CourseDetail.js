@@ -2,11 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Rating from 'react-rating';
 import { useNavigate, useParams } from 'react-router-dom';
+import useAuth from '../../../Hooks/useAuth';
 
 const CourseDetail = () => {
+
     const { courseId } = useParams();
     const [course, setCourse] = useState({});
     const navigate = useNavigate();
+    const { user } = useAuth();
+
     useEffect(() => {
         fetch(`http://localhost:5000/courses/${courseId}`)
             .then(res => res.json())
@@ -14,8 +18,26 @@ const CourseDetail = () => {
     }, [])
 
     const handleCheckout = () => {
-        navigate('/checkout')
+        const order = {
+            email: user.email,
+            price: course.price,
+            img: course.img,
+        }
+
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                "content-type": "application/json"
+            },
+            body: JSON.stringify(order)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+
+        navigate(`/payment/${course._id}`)
     }
+
+
     return (
         <Container>
             <Row>
