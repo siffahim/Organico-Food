@@ -143,3 +143,8 @@ $padding1:10px;
 .bank-btn:hover.bank-btn::before{
   width: 100%;
 }
+
+.order-card{
+  box-shadow: $box-shadow;
+  padding: $padding1;
+}

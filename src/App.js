@@ -7,6 +7,7 @@ import CourseDetail from './Pages/Home/CourseDetail/CourseDetail';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
+import MyOrder from './Pages/MyOrder/MyOrder';
 import Payment from './Pages/Payment/Payment';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import Navigation from './Pages/Shared/Navigation/Navigation';
@@ -20,6 +21,13 @@ const App = () => {
           <Route exact path='/' element={<Home />} />
 
           <Route path='/home' element={<Home />} />
+
+          <Route path='/myorder' element={
+            <PrivateRoute>
+              <MyOrder />
+            </PrivateRoute>
+          }
+          />
 
           <Route path='/courses/:courseId'
             element={

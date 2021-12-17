@@ -1,15 +1,19 @@
 import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
-const CheckoutForm = () => {
+const CheckoutForm = ({ paymentInfo }) => {
+    const { price, email, _id } = paymentInfo;
     const stripe = useStripe();
     const elements = useElements();
     const [error, setError] = useState('');
     const [sucess, setSucess] = useState('');
     const [clientSecret, setClientSecret] = useState('');
     const [processing, setProcessing] = useState(false);
+    const { user } = useAuth();
+    const navigate = useNavigate()
 
-    const price = 10;
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
@@ -60,7 +64,8 @@ const CheckoutForm = () => {
                 payment_method: {
                     card: card,
                     billing_details: {
-                        name: 'Jenny Rosen',
+                        name: user.displayName,
+                        email: email
                     },
                 },
             },
@@ -74,6 +79,29 @@ const CheckoutForm = () => {
             console.log(paymentIntent)
             setProcessing(false)
             setSucess('Successfully payment')
+
+            const payment = {
+                amount: paymentIntent.amount,
+                transaction: paymentIntent.client_secret.split('_secret')[0],
+                last4: paymentMethod.card.last4,
+                brand: paymentMethod.card.brand
+            }
+
+            //save to db
+            const url = `http://localhost:5000/orders/${_id}`
+            fetch(url, {
+                method: 'PUT',
+                headers: {
+                    "content-type": "application/json"
+                },
+                body: JSON.stringify(payment)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+
+                    navigate('/myorder')
+                })
         }
 
     }
