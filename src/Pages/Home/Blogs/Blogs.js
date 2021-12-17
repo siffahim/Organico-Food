@@ -1,31 +1,35 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
+import img2 from '../../../images/check-out.png';
+import img1 from '../../../images/food.png';
+import img4 from '../../../images/free-delivery.png';
+import img3 from '../../../images/location.png';
 
 const blogs = [
     {
         id: 1,
         count: '1900',
-        name: 'Video Tutorials',
-        img: 'https://10minuteschool.com/assets/landing-page/video.svg'
+        name: 'Select Product',
+        img: img1
     },
     {
         id: 2,
         count: '1900',
-        name: 'Video Tutorials',
-        img: 'https://10minuteschool.com/assets/landing-page/quiz.svg'
+        name: 'Add To Cart',
+        img: img2
     },
     {
         id: 3,
         count: '1900',
-        name: 'Video Tutorials',
-        img: 'https://10minuteschool.com/assets/landing-page/smartbook.svg'
+        name: 'Check Out',
+        img: img3
     },
     {
         id: 4,
         count: '1900',
-        name: 'Video Tutorials',
-        img: 'https://10minuteschool.com/assets/landing-page/blog.svg'
-    },
+        name: 'Waiting to Delivery',
+        img: img4
+    }
 ]
 
 const Blogs = () => {
@@ -35,11 +39,8 @@ const Blogs = () => {
                 {
                     blogs.map(blog => <Col sm={3} key={blog.id}>
                         <div className="blog-card">
-                            <img src={blog.img} alt="" />
-                            <div className='blgo-content'>
-                                <h3>{blog.count}+</h3>
-                                <p>{blog.name}</p>
-                            </div>
+                            <img width='60px' src={blog.img} alt="" />
+                            <h6 className='ms-3 mt-3'>{blog.name}</h6>
                         </div>
                     </Col>)
                 }

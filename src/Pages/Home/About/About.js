@@ -1,8 +1,10 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import img3 from '../../../images/exam.svg';
-import img2 from '../../../images/learning.svg';
-import img from '../../../images/teacher.svg';
+import img2 from '../../../images/deliver.png';
+import img3 from '../../../images/fast-delivery.png';
+import img4 from '../../../images/food-service.png';
+import img from '../../../images/h4-banner1.jpg';
+import img1 from '../../../images/money.png';
 
 const About = () => {
     return (
@@ -10,28 +12,45 @@ const About = () => {
             <Container>
                 <Row className='d-flex align-items-center'>
                     <Col sm={6}>
-                        <h2>About More</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum inventore ex quam aperiam, aspernatur fugiat et magni nobis neque autem voluptatibus at eius ipsam. Ex ipsa labore quasi, dolor repudiandae suscipit molestiae vitae autem earum iure animi eum at facilis totam dolorem architecto voluptate ducimus vero esse mollitia soluta! Consequatur.</p>
-                        <button className='custom-btn'>Learn More</button>
+                        <div className='d-flex align-items-center justify-content-center'>
+                            <div className='about-icon'>
+                                <img width='50px' src={img1} alt="" />
+                            </div>
+                            <div>
+                                <h6>100% Payment Secure</h6>
+                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                            </div>
+                        </div>
+                        <div className='d-flex align-items-center justify-content-center'>
+                            <div className='about-icon'>
+                                <img width='50px' src={img2} alt="" />
+                            </div>
+                            <div>
+                                <h6>100% Payment Secure</h6>
+                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                            </div>
+                        </div>
+                        <div className='d-flex align-items-center justify-content-center'>
+                            <div className='about-icon'>
+                                <img width='50px' src={img3} alt="" />
+                            </div>
+                            <div>
+                                <h6>100% Payment Secure</h6>
+                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                            </div>
+                        </div>
+                        <div className='d-flex align-items-center justify-content-center'>
+                            <div className='about-icon'>
+                                <img width='50px' src={img4} alt="" />
+                            </div>
+                            <div>
+                                <h6>100% Payment Secure</h6>
+                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                            </div>
+                        </div>
                     </Col>
                     <Col sm={6}>
                         <img width='80%' className='about-img' src={img} alt="" />
-                    </Col>
-                    <Col sm={6}>
-                        <img width='80%' className='about-img' src={img2} alt="" />
-                    </Col>
-                    <Col sm={6}>
-                        <h2>About More</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum inventore ex quam aperiam, aspernatur fugiat et magni nobis neque autem voluptatibus at eius ipsam. Ex ipsa labore quasi, dolor repudiandae suscipit molestiae vitae autem earum iure animi eum at facilis totam dolorem architecto voluptate ducimus vero esse mollitia soluta! Consequatur.</p>
-                        <button className='custom-btn'>Learn More</button>
-                    </Col>
-                    <Col sm={6}>
-                        <h2>About More</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum inventore ex quam aperiam, aspernatur fugiat et magni nobis neque autem voluptatibus at eius ipsam. Ex ipsa labore quasi, dolor repudiandae suscipit molestiae vitae autem earum iure animi eum at facilis totam dolorem architecto voluptate ducimus vero esse mollitia soluta! Consequatur.</p>
-                        <button className='custom-btn'>Learn More</button>
-                    </Col>
-                    <Col sm={6}>
-                        <img width='80%' className='about-img' src={img3} alt="" />
                     </Col>
                 </Row>
             </Container>

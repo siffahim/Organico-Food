@@ -1,24 +1,35 @@
 import React from 'react';
-import { Col, Row } from 'react-bootstrap';
-import img from "../../../images/studying.svg";
+import { Carousel } from 'react-bootstrap';
+import slide1 from '../../../images/slide1.1.jpg';
+import slide2 from '../../../images/slide1.2.jpg';
 
 const Banner = () => {
     return (
-        <div className='px-5 banner-bg'>
-            <Row className='d-flex align-items-center py-5'>
-                <Col sm={6}>
-                    <div>
-                        <p>A better learning future starts here</p>
-                        <h2 className='fw-bold mb-4'>EASY <br />SOLUTIONS <br /><span className='custom-title'>STUDY AT HOME</span></h2>
-                        <p className='mb-4'>Developing caring learners who are actively growing and achieving. Educating all students to achieve today and tomorrow in a global community and economy. Educating for human greatness.</p>
-                        <button className='custom-btn'>Get Started</button>
-                    </div>
-                </Col>
-                <Col sm={6}>
-                    <img width='100%' src={img} alt="" />
-                </Col>
-            </Row>
-        </div>
+        <Carousel fade>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={slide1}
+                    alt="First slide"
+                />
+                <Carousel.Caption>
+                    <h3>First slide label</h3>
+                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+            <Carousel.Item>
+                <img
+                    className="d-block w-100"
+                    src={slide2}
+                    alt="Second slide"
+                />
+
+                <Carousel.Caption>
+                    <h3>Second slide label</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </Carousel.Caption>
+            </Carousel.Item>
+        </Carousel>
     );
 };
 

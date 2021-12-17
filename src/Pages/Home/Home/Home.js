@@ -4,7 +4,7 @@ import About from '../About/About';
 import Banner from '../Banner/Banner';
 import Blogs from '../Blogs/Blogs';
 import Courses from '../Courses/Courses';
-import Gallery from '../Gallery/Gallery.js';
+import Gallery from '../Gallery/Gallery';
 
 const Home = () => {
     return (
