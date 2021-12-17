@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 import MyOrderCard from './MyOrderCard';
 
 const MyOrder = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth();
+    const navigate = useNavigate();
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
-            .then(res => res.json())
+        fetch(`http://localhost:5000/orders?email=${user.email}`, {
+            headers: {
+                "authorization": `Bearer ${sessionStorage.getItem('idToken')}`
+            }
+        })
+            .then(res => {
+                if (res.status === 200) {
+                    return res.json()
+                }
+                else if (res.status === 401) {
+                    return navigate('/login')
+                }
+            })
             .then(data => setOrders(data))
     }, [])
     return (
