@@ -37,12 +37,12 @@ const CourseDetail = () => {
             .then(res => res.json())
             .then(data => console.log(data))
 
-        navigate(`/myorder`)
+        navigate(`/dashboard/myorder`)
     }
 
 
     return (
-        <Container className='mt-4'>
+        <Container className='my-4'>
             <Row>
                 <Col sm={6}>
                     <div className='shadow rounded'>

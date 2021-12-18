@@ -14,14 +14,11 @@ import Register from './Pages/Login/Register/Register';
 import MyOrder from './Pages/MyOrder/MyOrder';
 import Payment from './Pages/Payment/Payment';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
-import Footer from './Pages/Shared/Footer/Footer';
-import Navigation from './Pages/Shared/Navigation/Navigation';
 
 const App = () => {
   return (
     <AuthProvider>
       <Router>
-        <Navigation />
         <Routes>
           <Route exact path='/' element={<Home />} />
 
@@ -59,7 +56,6 @@ const App = () => {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
         </Routes>
-        <Footer />
       </Router>
     </AuthProvider>
   );
