@@ -16,7 +16,7 @@ const Navigation = () => {
             <Navbar.Collapse>
                 <Nav className="ms-auto text-center d-flex align-items-center">
                     <Nav.Link as={Link} className='header-link' to="/home">Home</Nav.Link>
-                    <Nav.Link as={Link} className='header-link' to="/myorder">My order</Nav.Link>
+                    <Nav.Link as={Link} className='header-link' to="/dashboard">Dashboard</Nav.Link>
                     {
                         user.email && <Nav.Link href="#a" className='text-white fw-bold'>{user.displayName}</Nav.Link>
                     }

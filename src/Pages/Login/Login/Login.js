@@ -3,7 +3,7 @@ import { Col, Container, FormControl, InputGroup, Row } from 'react-bootstrap';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
 import logo from '../../../images/google.png';
-import img from '../../../images/img-login.svg';
+import img from '../../../images/login.svg';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({});
@@ -26,16 +26,16 @@ const Login = () => {
         login(loginData.email, loginData.password, navigate, location)
     }
     return (
-        <Container className='login-container py-5 mt-4'>
+        <Container className='login-container p-2 my-4'>
             <Row className='d-flex align-items-center'>
                 <Col sm={12} md={6}>
-                    <img width='80%' src={img} alt="" />
+                    <img width='70%' src={img} alt="" />
                 </Col>
                 <Col sm={12} md={4}>
-                    <h2>Login</h2>
+                    <h3>Login</h3>
                     <form onSubmit={handleSubmit}>
                         <InputGroup className="mb-3">
-                            <InputGroup.Text>@</InputGroup.Text>
+                            <InputGroup.Text><i class="fas fa-envelope icon2"></i></InputGroup.Text>
                             <FormControl
                                 placeholder="Email"
                                 type='email'
@@ -44,7 +44,7 @@ const Login = () => {
                             />
                         </InputGroup>
                         <InputGroup className="mb-3">
-                            <InputGroup.Text>@</InputGroup.Text>
+                            <InputGroup.Text><i class="fas fa-lock icon2"></i></InputGroup.Text>
                             <FormControl
                                 placeholder="Password"
                                 type='password'
@@ -52,7 +52,7 @@ const Login = () => {
                                 onBlur={handleOnBlur}
                             />
                         </InputGroup>
-                        <button>Login</button>
+                        <button className='col-12 custom-btn2 mb-4'>Login</button>
                     </form>
                     <div >
                         <button className='icon-content' onClick={() => googleLogin(navigate, location)} >

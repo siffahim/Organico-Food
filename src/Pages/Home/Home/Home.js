@@ -1,6 +1,5 @@
 import React from 'react';
 import Discount from '../../Discount/Discount';
-import Footer from '../../Shared/Footer/Footer';
 import About from '../About/About';
 import Banner from '../Banner/Banner';
 import Blogs from '../Blogs/Blogs';
@@ -22,7 +21,6 @@ const Home = () => {
             <Discount />
             <About />
             <Gallery />
-            <Footer />
         </div>
     );
 };
