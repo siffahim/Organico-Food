@@ -8,6 +8,7 @@ const MyOrder = () => {
     const [orders, setOrders] = useState([]);
     const { user } = useAuth();
     const navigate = useNavigate();
+    const [sum, setSum] = useState(0);
     useEffect(() => {
         fetch(`http://localhost:5000/orders?email=${user.email}`, {
             headers: {
@@ -23,19 +24,21 @@ const MyOrder = () => {
                 }
             })
             .then(data => setOrders(data))
-    }, [])
+    }, [sum, orders])
     return (
-        <Container>
-            <h2>My Order {orders.length}</h2>
-            <Row className='g-3'>
-                {
-                    orders.map(order => <MyOrderCard
-                        key={order}
-                        order={order}
-                    />)
-                }
-            </Row>
-        </Container>
+        <div className='mt-2'>
+            <Container>
+                <Row className='g-4'>
+                    {
+                        orders.map(order => <MyOrderCard
+                            key={order}
+                            order={order}
+                            setSum={setSum}
+                        />)
+                    }
+                </Row>
+            </Container>
+        </div>
     );
 };
 

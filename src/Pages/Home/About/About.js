@@ -1,20 +1,20 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import img2 from '../../../images/deliver.png';
-import img3 from '../../../images/fast-delivery.png';
-import img4 from '../../../images/food-service.png';
 import img from '../../../images/h4-banner1.jpg';
-import img1 from '../../../images/money.png';
 
 const About = () => {
     return (
-        <div className='about'>
+        <div className='about mt-5'>
             <Container>
+                <div className='py-4'>
+                    <h2>Why Choose us?</h2>
+                    <p>Our purpose is to build solutions that remove barriers preventing people from doing their best work, and this is at the heart.</p>
+                </div>
                 <Row className='d-flex align-items-center'>
                     <Col sm={6}>
                         <div className='d-flex align-items-center justify-content-center'>
                             <div className='about-icon'>
-                                <img width='50px' src={img1} alt="" />
+                                <i class="fas fa-hand-holding-usd icon"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
@@ -23,7 +23,7 @@ const About = () => {
                         </div>
                         <div className='d-flex align-items-center justify-content-center'>
                             <div className='about-icon'>
-                                <img width='50px' src={img2} alt="" />
+                                <i class="fas fa-swimmer icon2"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
@@ -32,7 +32,7 @@ const About = () => {
                         </div>
                         <div className='d-flex align-items-center justify-content-center'>
                             <div className='about-icon'>
-                                <img width='50px' src={img3} alt="" />
+                                <i class="fas fa-truck icon"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
@@ -41,7 +41,7 @@ const About = () => {
                         </div>
                         <div className='d-flex align-items-center justify-content-center'>
                             <div className='about-icon'>
-                                <img width='50px' src={img4} alt="" />
+                                <i class="fas fa-balance-scale icon2"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>

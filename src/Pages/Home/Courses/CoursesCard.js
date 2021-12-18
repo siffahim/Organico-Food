@@ -33,8 +33,8 @@ const CoursesCard = ({ course }) => {
                     </div>
                 </div>
                 <div className='food-content'>
-                    <h6>{name}</h6>
-                    <h6>${price}.99</h6>
+                    <p className='icon2'>{name}</p>
+                    <h6 style={{ color: '#62a403' }}>${price}.99</h6>
                 </div>
             </div>
         </Col>

@@ -38,7 +38,7 @@ const Blogs = () => {
             <Row>
                 {
                     blogs.map(blog => <Col sm={3} key={blog.id}>
-                        <div className="blog-card">
+                        <div className="blog-card shadow">
                             <img width='60px' src={blog.img} alt="" />
                             <h6 className='ms-3 mt-3'>{blog.name}</h6>
                         </div>

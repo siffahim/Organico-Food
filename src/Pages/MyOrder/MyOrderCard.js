@@ -1,31 +1,65 @@
 import React from 'react';
-import { Col } from 'react-bootstrap';
+import { Col, Row } from 'react-bootstrap';
+import Rating from 'react-rating';
 import { useNavigate } from 'react-router-dom';
 
-const MyOrderCard = ({ order }) => {
-    const { img, price, _id } = order;
+const MyOrderCard = ({ order, setSum }) => {
+    const { img, price, _id, name, review } = order;
     const navigate = useNavigate();
 
     const handlePayment = () => {
         navigate(`/payment/${_id}`)
     }
 
+    const handleDelete = id => {
+        fetch(`http://localhost:5000/orders/${id}`, {
+            method: 'DELETE'
+        })
+            .then(res => res.jons())
+            .then(data => {
+                console.log(data.deletedCount)
+                setSum(prev => prev + 1)
+            })
+    }
+
     return (
-        <Col sm={3}>
-            <div className='order-card'>
-                <div>
-                    <img width='100%' height='160px' src={img} alt="" />
-                </div>
-                <div className='d-flex align-items-center justify-content-between'>
-                    {/* <h2>{name}</h2> */}
-                    <h3>${price}</h3>
-                    <div>
-                        {
-                            order.payment ? 'Paid' : <button onClick={() => handlePayment(_id)}>Payment</button>
-                        }
-                        <button>Delete</button>
-                    </div>
-                </div>
+        <Col sm={6}>
+            <div className='shadow rounded p-2'>
+                <Row>
+                    <Col sm={4}>
+                        <div className='oreder-container'>
+                            <div>
+                                <img width='100%' src={img} alt="" />
+                            </div>
+                            <div className='order-btn-container'>
+                                <div className='btn-order' onClick={() => handleDelete(_id)}><i class="fas fa-trash-alt"></i></div>
+                                {
+                                    order.payment ? <div className='btn-order' style={{ cursor: 'not-allowed' }} title='Paid product'><i class="fas fa-ban icon"></i></div> : <div className='btn-order' onClick={() => handlePayment(_id)} title='Payment for product'><i class="fab fa-cc-amazon-pay"></i></div>
+                                }
+                                <div className='btn-order'><i class="fas fa-tag"></i></div>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col sm={8}>
+                        <div className='pt-3'>
+                            <h5>{name}</h5>
+                            <h6>${price}.66</h6>
+                            <Rating
+                                initialRating={review}
+                                emptySymbol="fa fa-star-o icon"
+                                fullSymbol="fa fa-star icon "
+                                readonly
+                            />
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                            {/* <div>
+                                {
+                                    order.payment ? 'Paid' : <button onClick={() => handlePayment(_id)}>Payment</button>
+                                }
+                                <button>Delete</button>
+                            </div> */}
+                        </div>
+                    </Col>
+                </Row>
             </div>
         </Col>
     );

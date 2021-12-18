@@ -10,6 +10,7 @@ const CourseDetail = () => {
     const [course, setCourse] = useState({});
     const navigate = useNavigate();
     const { user } = useAuth();
+    const [count, setCount] = useState(1);
 
     useEffect(() => {
         fetch(`http://localhost:5000/courses/${courseId}`)
@@ -19,6 +20,8 @@ const CourseDetail = () => {
 
     const handleCheckout = () => {
         const order = {
+            name: course.name,
+            review: course.review,
             email: user.email,
             price: course.price,
             img: course.img,
@@ -39,29 +42,37 @@ const CourseDetail = () => {
 
 
     return (
-        <Container>
+        <Container className='mt-4'>
             <Row>
                 <Col sm={6}>
-                    <div className='border'>
-                        <img width='100%' src={course.img} alt="" />
+                    <div className='shadow rounded'>
+                        <img width='100%' height='490px' src={course.img} alt="" />
                     </div>
                 </Col>
                 <Col sm={6}>
-                    <h2>{course.name}</h2>
-                    <h2>{course.writer}</h2>
-                    <h2>${course.price}.99</h2>
+                    <p className='text-muted'>Product Review</p>
+                    <p className='fs-3'>{course.name}</p>
+                    <p className='d-flex'>BRAND: <span className='brand icon2'><i class="fab fa-canadian-maple-leaf"></i></span></p>
+                    <h5>${(course.price) * count}.99</h5>
                     <Rating
                         initialRating={course.review}
                         emptySymbol="fa fa-star-o icon"
                         fullSymbol="fa fa-star icon "
                         readonly
-                    /><br />
-                    <button className='custom-btn mt-2' onClick={handleCheckout}>Check Out</button>
-                </Col>
-                <Col>
-                    <p> Educatin is breath of people
-                        Education can be a convenient means of displaying contents that includes various types of objects be it the title, image, buttons, icons or more. Designed to be flexible to your contents, the blocks or cards can include any type of custom elements. It can be anything from business cards, informative cards to even analytics cards but the main point here is that adding a card on any site will instantly add that innovative and creative touch. And like we have discussed before on our previous articles, there is certainly no denying that cards can be beneficial in more than one way.Whether you own a blog, professional company site, or anything for that matter, cards can be a great implementation on any niche.
-                    </p>
+                    /><br /><br />
+                    <p>We value the experimentation, the reformation of the message, and the smart incentives. We offer a variety of services and solutions Worldwide. We’ve been lucky to collaborate with a long list of customers.</p>
+                    <div>
+                        <span>WEHIGT:</span>
+                        <button className='btn fw-normal border mx-1'>1kg</button>
+                        <button className='btn fw-normal border mx-1'>5kg</button>
+                        <button className='btn fw-normal border mx-1'>250kg</button>
+                    </div>
+                    <div className='my-3'>
+                        <button onClick={() => setCount(count - 1)} className='custom-btn'>-</button>
+                        <button className='custom-btn2 fw-bold mx-1 px-4'>{count}</button>
+                        <button onClick={() => setCount(count + 1)} className='custom-btn'>+</button>
+                    </div>
+                    <button className='bank-btn mt-2' onClick={handleCheckout}>BUY NOW</button>
                 </Col>
             </Row>
         </Container>
