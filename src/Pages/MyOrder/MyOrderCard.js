@@ -51,12 +51,6 @@ const MyOrderCard = ({ order, setSum }) => {
                                 readonly
                             />
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-                            {/* <div>
-                                {
-                                    order.payment ? 'Paid' : <button onClick={() => handlePayment(_id)}>Payment</button>
-                                }
-                                <button>Delete</button>
-                            </div> */}
                         </div>
                     </Col>
                 </Row>

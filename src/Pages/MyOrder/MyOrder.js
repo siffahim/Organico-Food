@@ -14,17 +14,10 @@ const MyOrder = () => {
             headers: {
                 "authorization": `Bearer ${sessionStorage.getItem('idToken')}`
             }
-        })
-            .then(res => {
-                if (res.status === 200) {
-                    return res.json()
-                }
-                else if (res.status === 401) {
-                    return navigate('/login')
-                }
-            })
+        }).then(res => res.json())
             .then(data => setOrders(data))
-    }, [sum, orders])
+
+    }, [sum, orders, navigate, user])
     return (
         <div className='mt-2'>
             <Container>
@@ -43,3 +36,12 @@ const MyOrder = () => {
 };
 
 export default MyOrder;
+
+/* .then(res => {
+    if (res.status === 200) {
+        return res.json()
+    }
+    else if (res.status === 401) {
+        return navigate('/login')
+    }
+}) */

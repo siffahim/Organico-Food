@@ -5,6 +5,8 @@ import { Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import img2 from '../../images/download.png';
 import img from '../../images/Solucooaes-Bank.svg';
+import Footer from '../Shared/Footer/Footer';
+import Navigation from '../Shared/Navigation/Navigation';
 import CheckoutForm from './CheckoutForm';
 
 const Payment = () => {
@@ -22,6 +24,7 @@ const Payment = () => {
 
     return (
         <div>
+            <Navigation />
             <Container className='login-container py-5 mt-4'>
                 <Row className='d-flex align-items-center'>
                     <Col sm={12} md={6}>
@@ -41,6 +44,7 @@ const Payment = () => {
                     </Col>
                 </Row>
             </Container>
+            <Footer />
         </div>
     );
 };

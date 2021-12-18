@@ -2,8 +2,6 @@ import { CardElement, useElements, useStripe } from '@stripe/react-stripe-js';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
-import Footer from '../Shared/Footer/Footer';
-import Navigation from '../Shared/Navigation/Navigation';
 
 const CheckoutForm = ({ paymentInfo }) => {
     const { price, email, _id } = paymentInfo;
@@ -109,7 +107,6 @@ const CheckoutForm = ({ paymentInfo }) => {
     }
     return (
         <>
-            <Navigation />
             <div>
                 <form onSubmit={handleSubmit}>
                     <CardElement
@@ -142,7 +139,6 @@ const CheckoutForm = ({ paymentInfo }) => {
                     sucess && <p className='mt-3' style={{ color: 'green' }}>{sucess}</p>
                 }
             </div>
-            <Footer />
         </>
     );
 };
