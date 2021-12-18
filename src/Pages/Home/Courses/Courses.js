@@ -7,10 +7,9 @@ const Courses = () => {
     const [page, setPage] = useState(0);
     const [pageNumber, setPageNumber] = useState()
     const size = 8;
-    console.log(page)
     useEffect(() => {
         const run = async () => {
-            const res = await fetch(`http://localhost:5000/courses?page=${page}&&size=${size}`)
+            const res = await fetch(`https://safe-taiga-87935.herokuapp.com/courses?page=${page}&&size=${size}`)
             const data = await res.json()
             setCourses(data.result)
             const count = data.count;

@@ -1,10 +1,10 @@
 const firebaseConfig = {
-    apiKey: "AIzaSyAxLL0-_DxFSu-aM_kYO1zDoIHgHIWhXWc",
-    authDomain: "education-project-728a8.firebaseapp.com",
-    projectId: "education-project-728a8",
-    storageBucket: "education-project-728a8.appspot.com",
-    messagingSenderId: "821786508138",
-    appId: "1:821786508138:web:3ac905faf456759fa60313"
+    apiKey: "AIzaSyCnsdSyNwQtc42wirkwiviD4fTahjWKkxw",
+    authDomain: "organic-food-c593d.firebaseapp.com",
+    projectId: "organic-food-c593d",
+    storageBucket: "organic-food-c593d.appspot.com",
+    messagingSenderId: "792910639141",
+    appId: "1:792910639141:web:85f36381e74ef6ae948fcc"
 };
 
 export default firebaseConfig;

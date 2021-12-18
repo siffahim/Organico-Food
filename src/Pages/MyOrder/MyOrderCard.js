@@ -12,7 +12,7 @@ const MyOrderCard = ({ order, setSum }) => {
     }
 
     const handleDelete = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://safe-taiga-87935.herokuapp.com/orders/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.jons())

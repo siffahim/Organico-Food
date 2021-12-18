@@ -13,7 +13,7 @@ const CourseDetail = () => {
     const [count, setCount] = useState(1);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/courses/${courseId}`)
+        fetch(`https://safe-taiga-87935.herokuapp.com/courses/${courseId}`)
             .then(res => res.json())
             .then(data => setCourse(data))
     }, [])
@@ -27,7 +27,7 @@ const CourseDetail = () => {
             img: course.img,
         }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://safe-taiga-87935.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"

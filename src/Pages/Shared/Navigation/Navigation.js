@@ -6,7 +6,6 @@ import logo from '../../../images/logo.png';
 
 const Navigation = () => {
     const { user, logOut } = useAuth();
-    console.log(user)
     return (
         <Navbar collapseOnSelect expand="lg" variant="dark" className="px-3 text-white header">
             <Navbar.Brand href="#home">

@@ -18,7 +18,7 @@ const CheckoutForm = ({ paymentInfo }) => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://safe-taiga-87935.herokuapp.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 "content-type": 'application/json'
@@ -90,7 +90,7 @@ const CheckoutForm = ({ paymentInfo }) => {
             }
 
             //save to db
-            const url = `http://localhost:5000/orders/${_id}`
+            const url = `https://safe-taiga-87935.herokuapp.com/orders/${_id}`
             fetch(url, {
                 method: 'PUT',
                 headers: {

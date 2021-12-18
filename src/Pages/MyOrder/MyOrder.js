@@ -10,7 +10,7 @@ const MyOrder = () => {
     const navigate = useNavigate();
     const [sum, setSum] = useState(0);
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`, {
+        fetch(`https://safe-taiga-87935.herokuapp.com/orders?email=${user.email}`, {
             headers: {
                 "authorization": `Bearer ${sessionStorage.getItem('idToken')}`
             }
