@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
 $color1:#fff;
 $color2:#62a403;
 $color3:#f95800;
@@ -12,13 +15,17 @@ $padding1:10px;
 
 .header{
   background-color: $color2;
-
+}
+.text{
+  font-family: 'Pacifico', cursive;
+font-family: 'The Nautigal', cursive;
 }
 .header-link{
   text-decoration: none;
   border: none;
-  padding:8px 10px;
-  color:$color1;
+  display: block;
+  padding:8px 15px !important;
+  color:$color1 !important;
   border-radius:5px;
   transition: 0.4s;
   margin-right: 10px;

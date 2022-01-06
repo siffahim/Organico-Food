@@ -15,15 +15,17 @@ const Navigation = () => {
             <Navbar.Collapse>
                 <Nav className="ms-auto text-center d-flex align-items-center">
                     <Nav.Link as={Link} className='header-link' to="/home">Home</Nav.Link>
+                    <Nav.Link as={Link} className='header-link' to="/shop">Shop</Nav.Link>
+                    <Nav.Link as={Link} className='header-link' to="/home">Blog</Nav.Link>
                     <Nav.Link as={Link} className='header-link' to="/dashboard">Dashboard</Nav.Link>
                     {
-                        user.email && <Nav.Link href="#a" className='text-white fw-bold'>{user.displayName}</Nav.Link>
+                        user.email && <Nav.Link href="#a" className='text-white text'>{user.displayName}</Nav.Link>
                     }
                     {
-                        user.email && <img style={{ width: '50px', height: '50px', marginRight: '10px', borderRadius: '50%' }} src={user.photoURL} alt="" />
+                        user.email && <img style={{ width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%' }} src={user.photoURL} alt="" />
                     }
                     {
-                        user.email ? <button onClick={logOut} className='custom-btn'><i class="fas fa-sign-out-alt"></i> Logout</button> : <Nav.Link as={Link} className='custom-btn' to="/login">Login</Nav.Link>
+                        user.email ? <button onClick={logOut} className='btn fs-5 text-white'><i class="fas fa-sign-in-alt"></i></button> : <Nav.Link as={Link} className='text-white fs-5' to="/login"><i className="far fa-user"></i></Nav.Link>
                     }
                 </Nav>
             </Navbar.Collapse>

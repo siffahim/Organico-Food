@@ -12,8 +12,10 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Register from './Pages/Login/Register/Register';
 import MyOrder from './Pages/MyOrder/MyOrder';
+import NotFound from './Pages/NotFound/NotFound';
 import Payment from './Pages/Payment/Payment';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Shop from './Pages/Shop/Shop';
 
 const App = () => {
   return (
@@ -23,6 +25,7 @@ const App = () => {
           <Route exact path='/' element={<Home />} />
 
           <Route path='/home' element={<Home />} />
+          <Route path='/shop' element={<Shop />} />
 
 
           <Route path='/dashboard' element={
@@ -55,6 +58,8 @@ const App = () => {
 
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+
+          <Route path='*' element={<NotFound />} />
         </Routes>
       </Router>
     </AuthProvider>
