@@ -19,7 +19,7 @@ const Courses = () => {
         run()
     }, [page])
     return (
-        <div className='px-4'>
+        <div className='px-5'>
             <Row className='gy-3'>
                 {
                     courses.map(course => <CoursesCard

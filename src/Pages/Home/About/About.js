@@ -7,45 +7,45 @@ const About = () => {
         <div className='about mt-5'>
             <Container>
                 <div className='py-4'>
-                    <h2>Why Choose us?</h2>
-                    <p>Our purpose is to build solutions that remove barriers preventing people from doing their best work, and this is at the heart.</p>
+                    <h2 className='fw-bold text-muted'>Why Choose us?</h2>
+                    <p className='text-muted'>Our purpose is to build solutions that remove barriers preventing people from doing their best work, and this is at the heart.</p>
                 </div>
                 <Row className='d-flex align-items-center'>
                     <Col sm={6}>
-                        <div className='d-flex align-items-center justify-content-center'>
+                        <div className='d-flex align-items-center'>
                             <div className='about-icon'>
                                 <i class="fas fa-hand-holding-usd icon"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
-                        <div className='d-flex align-items-center justify-content-center'>
+                        <div className='d-flex align-items-center'>
                             <div className='about-icon'>
                                 <i class="fas fa-swimmer icon2"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
-                        <div className='d-flex align-items-center justify-content-center'>
+                        <div className='d-flex align-items-center '>
                             <div className='about-icon'>
                                 <i class="fas fa-truck icon"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
-                        <div className='d-flex align-items-center justify-content-center'>
+                        <div className='d-flex align-items-center'>
                             <div className='about-icon'>
                                 <i class="fas fa-balance-scale icon2"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
-                                <p>Dolor sit amet, consectetur adipiscing elit, sed eiusmod temporincididunt ut labore et.</p>
+                                <p>Dolor sit amet, consectetur adipiscing elit.</p>
                             </div>
                         </div>
                     </Col>

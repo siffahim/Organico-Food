@@ -7,8 +7,8 @@ const Discount = () => {
     return (
         <Container>
             <div className='pb-4'>
-                <h2>What We Offer for You</h2>
-                <p>Our purpose is to build solutions that remove barriers preventing people from doing their best work, and this is at the heart.</p>
+                <h2 className='fw-bold text-muted'>What We Offer for You</h2>
+                <p className='text-muted'>Our purpose is to build solutions that remove barriers preventing people from doing their best work, and this is at the heart.</p>
             </div>
             <Row>
                 <Col sm={6}>

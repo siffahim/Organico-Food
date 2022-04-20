@@ -4,7 +4,7 @@
 $color1:#fff;
 $color2:#62a403;
 $color3:#f95800;
-$box-shadow:0 0 5px rgb(0,0,0,0.2);
+$box-shadow:0 0 5px rgb(0, 0, 0, 0.2);
 $btn-padding:10px 13px;
 $radius1:3px;
 $btn-radius:50px;
@@ -12,50 +12,66 @@ $bold:bold;
 $heading-color:blueviolet;
 $padding1:10px;
 
+.cutText {
+  color: $color3;
+}
 
-.header{
+.header {
   background-color: $color2;
 }
-.text{
-  font-family: 'Pacifico', cursive;
-font-family: 'The Nautigal', cursive;
+
+.carousel-price-color {
+  color: $color3;
 }
-.header-link{
+
+.text {
+  font-family: 'Pacifico', cursive;
+  font-family: 'The Nautigal', cursive;
+}
+
+.header-link {
   text-decoration: none;
   border: none;
   display: block;
-  padding:8px 15px !important;
-  color:$color1 !important;
-  border-radius:5px;
+  padding: 8px 15px !important;
+  color: $color1 !important;
+  border-radius: 5px;
   transition: 0.4s;
   margin-right: 10px;
 }
-.header-link:hover{
-    background-color: $color3;
-    color: $color1;
+
+.header-link:hover {
+  background-color: $color3;
+  color: $color1;
 }
-.icon{
+
+.icon {
   color: $color3;
 }
-.icon2{
+
+.icon2 {
   color: $color2;
 }
-.food-card{
+
+.food-card {
   position: relative;
   overflow: hidden;
 }
-.food-btn-container{
-   position: absolute;
-   top: 20%;
-   right: -50px;
-   transition: 0.4s;
-   
+
+.food-btn-container {
+  position: absolute;
+  top: 20%;
+  right: -50px;
+  transition: 0.4s;
+  z-index: 99999;
 }
-.food-card:hover .food-btn-container{
-   right: 0px;
+
+.food-card:hover .food-btn-container {
+  right: 0px;
 }
-.food-btn{
-  background-color:$color2;
+
+.food-btn {
+  background: $color2;
   color: $color1;
   display: flex;
   align-items: center;
@@ -65,10 +81,11 @@ font-family: 'The Nautigal', cursive;
   margin: 10px;
   cursor: pointer;
 }
-.btn-order{
+
+.btn-order {
   width: 40px;
   height: 40px;
-  background-color:#61a403be;
+  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
   color: $color1;
   display: flex;
   align-items: center;
@@ -79,36 +96,43 @@ font-family: 'The Nautigal', cursive;
   cursor: pointer;
 
 }
-.oreder-container{
+
+.oreder-container {
   position: relative;
 }
-.order-btn-container{
+
+.order-btn-container {
   position: absolute;
   top: 10px;
   left: -30px;
 }
-.food-content{
+
+.food-content {
   position: absolute;
-  bottom:0px;
-  left: 100px;
-  padding: 2px;
-  line-height: 5px;
+  color: #87878a;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
   text-align: center;
+  font-weight: bold;
+  line-height: 0;
   transition: 0.4s;
 }
-.about-icon{
-  width: 95px;
-  height: 70px;
-  padding: 10px;
+
+.about-icon {
+  width: 80px;
+  height: 80px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #ece6e6;
+  margin-bottom: 8px;
   margin-right: 20px;
   font-size: 2em;
 }
-.faciliti-icon{
+
+.faciliti-icon {
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -116,43 +140,55 @@ font-family: 'The Nautigal', cursive;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $color2;
+  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
   color: $color1;
   margin-right: 20px;
-  font-size:18px;
-}
-.footer-container{
-  background-color:$color2;
-  color:$color1;
-  list-style-type: none;
-  padding-top: 60px;
-  padding-bottom: 100px;
-}
-.footer-container ul{
- list-style-type: none;
- padding: 0;
-}
-.about{
-  background-color: #fafafa;
-}
-.gallery-container{
-  width: 100%;
-  height: 55vh;
-  background:url('./images/bg-landing-footer.jpg');
-  background-size: cover;
-  padding-top: 60px;
+  font-size: 18px;
 }
 
-.btn-gallery{
+.footer-container {
+  background-color: #222428;
+  color: #aa9f80;
+  list-style-type: none;
+  padding: 60px 50px;
+}
+
+.footer-under {
+  border-top: 1px solid rgb(71, 71, 71);
+  background-color: #1d1e20;
+  color: #aa9f80;
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
+.footer-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about {
+  background-color: #fafafa;
+}
+
+.gallery-container {
+  width: 100%;
+  height: 45vh;
+  padding-top: 50px;
+  background: url('./images/bg-landing-footer.jpg');
+  background-size: cover;
+}
+
+.btn-gallery {
   border: none;
   padding: 18px 40px;
-  background-color: $color2;
+  background-image: linear-gradient(to bottom, #ff833f 0%, #f86c21 100%);
   color: $color1;
   font-family: $bold;
   border-radius: $btn-radius;
   margin-top: 20px;
 }
-.brand{
+
+.brand {
   width: 30px;
   height: 30px;
   margin-left: 5px;
@@ -161,70 +197,80 @@ font-family: 'The Nautigal', cursive;
   align-items: center;
   justify-content: center;
 }
-.custom-btn{
+
+.custom-btn {
   border: none;
-  padding:8px 10px;
-  background-color: $color3;
-  color:$color1;
-  border-radius:5px;
+  padding: 8px 10px;
+  background-image: linear-gradient(to bottom, #ff833f 0%, #f86c21 100%);
+  color: $color1;
+  border-radius: 5px;
 }
-.custom-btn2{
- border: none;
-  padding:8px 10px;
-  background-color: $color2;
-  color:$color1;
-  border-radius:5px;
+
+.custom-btn2 {
+  border: none;
+  padding: 8px 10px;
+  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
+  color: $color1;
+  border-radius: 5px;
 }
-.blog-card{
+
+.blog-card {
   display: flex;
   align-items: center;
   height: 80px;
   border-radius: $radius1;
-  padding:$padding1;
+  padding: $padding1;
 }
-.selectd{
-  background:$color3;
+
+.selectd {
+  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
   color: #fff;
   margin-left: 5px;
   margin-right: 5px;
 }
-.login-container{
-    text-align: center;
+
+.login-container {
+  text-align: center;
 }
-.icon-content{
-    width: 100%;
-    border: 1px solid #bdb9b9;
-    display: flex;
-    align-items: center;
-    padding: 5px;
-    border-radius: 30px;
-    background:#fff;
+
+.icon-content {
+  width: 100%;
+  border: 1px solid #bdb9b9;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 30px;
+  background: #fff;
 }
-.footer-icon{
+
+.footer-icon {
   list-style: none;
   margin-right: 10px;
-  background:$color1;
+  background: $color1;
   color: $color2;
   padding: 5px 10px;
   border-radius: 50px;
 }
-.banking{
+
+.banking {
   box-shadow: $box-shadow;
   padding: 15px 20px;
   border-radius: $radius1;
 }
-.bank-btn{
+
+.bank-btn {
   border: none;
   display: inline-block;
   padding: $btn-padding;
   background-color: $color2;
   color: $color1;
-  border-radius:3px;
+  border-radius: 3px;
   margin-top: 20px;
   position: relative;
   z-index: 9999;
 }
-.bank-btn::before{
+
+.bank-btn::before {
   content: '';
   position: absolute;
   top: 0;
@@ -232,15 +278,21 @@ font-family: 'The Nautigal', cursive;
   width: 0%;
   height: 100%;
   background-color: $color3;
-   border-radius:3px;
-   transition: 0.4s;
-    z-index: -9999;
+  border-radius: 3px;
+  transition: 0.4s;
+  z-index: -9999;
 }
-.bank-btn:hover.bank-btn::before{
+
+.bank-btn:hover.bank-btn::before {
   width: 100%;
 }
 
-.order-card{
+.order-card {
   box-shadow: $box-shadow;
   padding: $padding1;
+}
+
+.buy-btn {
+  background-image: linear-gradient(to bottom, #ff833f 0%, #f86c21 100%);
+  color: white;
 }

@@ -18,7 +18,7 @@ const CourseDetail = () => {
         fetch(`https://safe-taiga-87935.herokuapp.com/courses/${courseId}`)
             .then(res => res.json())
             .then(data => setCourse(data))
-    }, [])
+    }, [courseId])
 
     const handleCheckout = () => {
         const order = {
@@ -49,7 +49,7 @@ const CourseDetail = () => {
             <Container className='my-4'>
                 <Row>
                     <Col sm={6}>
-                        <div className='shadow rounded'>
+                        <div>
                             <img width='100%' height='490px' src={course.img} alt="" />
                         </div>
                     </Col>
