@@ -47,7 +47,7 @@ I'm a full stack developer...
 
 ## Screenshot
 
-<!-- ![App Screenshot](https://i.ibb.co/n71khBn/screencapture-jewellery-ec2de-web-app-2021-11-11-21-30-36.png) -->
+![App Screenshot](https://i.ibb.co/4p04Krd/organic-food-screenshot.png)
 
 
 
