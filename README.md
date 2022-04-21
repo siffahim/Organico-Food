@@ -30,24 +30,9 @@ t is a single page application made with ReactJS, etc...
  - Css
  - Git
 
-
-## Website Color
-
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
-| Header Color | ![#14103a](https://via.placeholder.com/10/14103a?text=+) #0a192f |
-| Body Color | ![#fe8403](https://via.placeholder.com/10/fe8403?text=+) #f8f8f8 |
-
-
-
-## 🚀 About Me
-I'm a full stack developer...
- [Portfolio](https://siffahim.github.io/developer-portfolio/)
-
-
 ## Screenshot
 
-![App Screenshot](https://i.ibb.co/4p04Krd/organic-food-screenshot.png)
+![App Screenshot](https://i.ibb.co/cLnVJCp/organic-food-ss.png)
 
 
 
