@@ -7,6 +7,7 @@ const Courses = () => {
     const [page, setPage] = useState(0);
     const [pageNumber, setPageNumber] = useState()
     const size = 8;
+
     useEffect(() => {
         const run = async () => {
             const res = await fetch(`https://safe-taiga-87935.herokuapp.com/courses?page=${page}&&size=${size}`)

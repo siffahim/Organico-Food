@@ -3,11 +3,10 @@ import { Col, Container, Row } from 'react-bootstrap';
 import Rating from 'react-rating';
 import { useNavigate, useParams } from 'react-router-dom';
 import useAuth from '../../../Hooks/useAuth';
-import Footer from '../../Shared/Footer/Footer';
 import Navigation from '../../Shared/Navigation/Navigation';
 
 const CourseDetail = () => {
-
+    const [datas, setDatas] = useState([]);
     const { courseId } = useParams();
     const [course, setCourse] = useState({});
     const navigate = useNavigate();
@@ -42,21 +41,35 @@ const CourseDetail = () => {
         navigate(`/dashboard/myorder`)
     }
 
+    useEffect(() => {
+        fetch('https://safe-taiga-87935.herokuapp.com/courses')
+            .then(res => res.json())
+            .then(data => setDatas(data.result))
+    }, [])
 
     return (
         <>
             <Navigation />
-            <Container className='my-4'>
+            <Container className='my-1'>
                 <Row>
                     <Col sm={6}>
                         <div>
                             <img width='100%' height='490px' src={course.img} alt="" />
                         </div>
+                        <Row>
+                            {
+                                datas.slice(0, 4).map(data => <Col xs={3} md={3}>
+                                    <div className='productNastedCard'>
+                                        <img width='100%' src={data.img} alt="" />
+                                    </div>
+                                </Col>)
+                            }
+                        </Row>
                     </Col>
                     <Col sm={6}>
                         <p className='text-muted'>Product Review</p>
                         <p className='fs-3'>{course.name}</p>
-                        <p className='d-flex'>BRAND: <span className='brand icon2'><i class="fab fa-canadian-maple-leaf"></i></span></p>
+                        <p className='d-flex'>BRAND: <span className='brand icon2'><i className="fab fa-canadian-maple-leaf"></i></span></p>
                         <h5>${(course.price) * count}.99</h5>
                         <Rating
                             initialRating={course.review}
@@ -80,7 +93,6 @@ const CourseDetail = () => {
                     </Col>
                 </Row>
             </Container>
-            <Footer />
         </>
     );
 };

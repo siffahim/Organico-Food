@@ -13,7 +13,7 @@ const ProductFacility = () => {
                 <Col sm={4}>
                     <div className='d-flex align-items-center justify-content-center my-3'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-seedling"></i>
+                            <i className="fas fa-seedling"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Eat healthy food</h6>
@@ -22,7 +22,7 @@ const ProductFacility = () => {
                     </div>
                     <div className='d-flex align-items-center justify-content-center my-4'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-cookie-bite"></i>
+                            <i className="fas fa-cookie-bite"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Sweet Exoit food</h6>
@@ -31,7 +31,7 @@ const ProductFacility = () => {
                     </div>
                     <div className='d-flex align-items-center justify-content-center my-4'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-mug-hot"></i>
+                            <i className="fas fa-mug-hot"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Sweet Exoit food</h6>
@@ -40,7 +40,7 @@ const ProductFacility = () => {
                     </div>
                     <div className='d-flex align-items-center justify-content-center my-4'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-carrot"></i>
+                            <i className="fas fa-carrot"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Sweet Exoit food</h6>
@@ -54,7 +54,7 @@ const ProductFacility = () => {
                 <Col sm={4}>
                     <div className='d-flex align-items-center justify-content-center my-3'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-shopping-bag"></i>
+                            <i className="fas fa-shopping-bag"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Sweet Exoit food</h6>
@@ -63,7 +63,7 @@ const ProductFacility = () => {
                     </div>
                     <div className='d-flex align-items-center justify-content-center my-4'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-stopwatch"></i>
+                            <i className="fas fa-stopwatch"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Sweet Exoit food</h6>
@@ -72,7 +72,7 @@ const ProductFacility = () => {
                     </div>
                     <div className='d-flex align-items-center justify-content-center my-3'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-map-marked-alt"></i>
+                            <i className="fas fa-map-marked-alt"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Sweet Exoit food</h6>
@@ -81,7 +81,7 @@ const ProductFacility = () => {
                     </div>
                     <div className='d-flex align-items-center justify-content-center my-3'>
                         <div className='faciliti-icon'>
-                            <i class="fas fa-university"></i>
+                            <i className="fas fa-university"></i>
                         </div>
                         <div style={{ lineHeight: '10px' }}>
                             <h6 className='fw-bold text-muted'>Sweet Exoit food</h6>

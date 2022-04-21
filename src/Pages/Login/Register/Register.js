@@ -43,7 +43,7 @@ const Register = () => {
                         <h3 className='mb-4'>Register</h3>
                         <form onSubmit={handleSubmit}>
                             <InputGroup className="mb-3">
-                                <InputGroup.Text><i class="fas fa-user icon2"></i></InputGroup.Text>
+                                <InputGroup.Text><i className="fas fa-user icon2"></i></InputGroup.Text>
                                 <FormControl
                                     placeholder="Name"
                                     type='text'
@@ -52,7 +52,7 @@ const Register = () => {
                                 />
                             </InputGroup>
                             <InputGroup className="mb-3">
-                                <InputGroup.Text><i class="fas fa-envelope icon2"></i></InputGroup.Text>
+                                <InputGroup.Text><i className="fas fa-envelope icon2"></i></InputGroup.Text>
                                 <FormControl
                                     placeholder="Email"
                                     type='email'
@@ -61,7 +61,7 @@ const Register = () => {
                                 />
                             </InputGroup>
                             <InputGroup className="mb-3">
-                                <InputGroup.Text><i class="fas fa-unlock icon2"></i></InputGroup.Text>
+                                <InputGroup.Text><i className="fas fa-unlock icon2"></i></InputGroup.Text>
                                 <FormControl
                                     placeholder="Password"
                                     type='password'
@@ -70,7 +70,7 @@ const Register = () => {
                                 />
                             </InputGroup>
                             <InputGroup className="mb-3">
-                                <InputGroup.Text><i class="fas fa-lock icon2"></i></InputGroup.Text>
+                                <InputGroup.Text><i className="fas fa-lock icon2"></i></InputGroup.Text>
                                 <FormControl
                                     placeholder="Confirm password"
                                     type='password'

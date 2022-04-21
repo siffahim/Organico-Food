@@ -11,31 +11,31 @@ const Footer = () => {
                         <img width='50%' src={logo} alt="" />
                         <p className='mt-2'>We work with a passion of taking challenges and creating new ones in advertising sector.</p>
                         <ul className='d-flex m-0 p-0'>
-                            <li className='footer-icon'><i class="fab fa-instagram"></i></li>
-                            <li className='footer-icon'><i class="fab fa-twitter"></i></li>
-                            <li className='footer-icon'><i class="fas fa-globe"></i></li>
-                            <li className='footer-icon'><i class="fab fa-whatsapp"></i></li>
+                            <li className='footer-icon'><i className="fab fa-instagram"></i></li>
+                            <li className='footer-icon'><i className="fab fa-twitter"></i></li>
+                            <li className='footer-icon'><i className="fas fa-globe"></i></li>
+                            <li className='footer-icon'><i className="fab fa-whatsapp"></i></li>
                         </ul>
                     </Col>
                     <Col sm={12} md={2}>
                         <h4>Links</h4>
                         <ul>
-                            <li><i class="fas fa-carrot"></i> Home</li>
-                            <li><i class="fas fa-carrot"></i> Service</li>
-                            <li><i class="fas fa-carrot"></i> About us</li>
-                            <li><i class="fas fa-carrot"></i> Testimonials</li>
-                            <li><i class="fas fa-carrot"></i> News</li>
-                            <li><i class="fas fa-carrot"></i> FQA</li>
-                            <li><i class="fas fa-carrot"></i> About us</li>
+                            <li><i className="fas fa-carrot"></i> Home</li>
+                            <li><i className="fas fa-carrot"></i> Service</li>
+                            <li><i className="fas fa-carrot"></i> About us</li>
+                            <li><i className="fas fa-carrot"></i> Testimonials</li>
+                            <li><i className="fas fa-carrot"></i> News</li>
+                            <li><i className="fas fa-carrot"></i> FQA</li>
+                            <li><i className="fas fa-carrot"></i> About us</li>
 
                         </ul>
                     </Col>
                     <Col sm={12} md={3}>
                         <h4>Information</h4>
                         <ul>
-                            <li><i class="fas fa-map-marker-alt"></i> 30 Commercial Road
+                            <li><i className="fas fa-map-marker-alt"></i> 30 Commercial Road
                                 Fratton, Australia</li>
-                            <li><i class="fas fa-phone-alt"></i> 1-888-452-1505</li>
+                            <li><i className="fas fa-phone-alt"></i> 1-888-452-1505</li>
                             <h6>Open Hours:</h6>
                             <li>Mon – Sat: 8 am – 5 pm,
                                 Sunday: Close</li>

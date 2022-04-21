@@ -14,7 +14,7 @@ const About = () => {
                     <Col sm={6}>
                         <div className='d-flex align-items-center'>
                             <div className='about-icon'>
-                                <i class="fas fa-hand-holding-usd icon"></i>
+                                <i className="fas fa-hand-holding-usd icon"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
@@ -23,7 +23,7 @@ const About = () => {
                         </div>
                         <div className='d-flex align-items-center'>
                             <div className='about-icon'>
-                                <i class="fas fa-swimmer icon2"></i>
+                                <i className="fas fa-swimmer icon2"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
@@ -32,7 +32,7 @@ const About = () => {
                         </div>
                         <div className='d-flex align-items-center '>
                             <div className='about-icon'>
-                                <i class="fas fa-truck icon"></i>
+                                <i className="fas fa-truck icon"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>
@@ -41,7 +41,7 @@ const About = () => {
                         </div>
                         <div className='d-flex align-items-center'>
                             <div className='about-icon'>
-                                <i class="fas fa-balance-scale icon2"></i>
+                                <i className="fas fa-balance-scale icon2"></i>
                             </div>
                             <div>
                                 <h6>100% Payment Secure</h6>

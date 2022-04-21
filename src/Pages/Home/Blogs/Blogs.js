@@ -1,9 +1,10 @@
 import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 import img2 from '../../../images/check-out.png';
 import img1 from '../../../images/food.png';
 import img4 from '../../../images/free-delivery.png';
 import img3 from '../../../images/location.png';
+import ItemDetail from './ItemDetail';
 
 const blogs = [
     {
@@ -35,14 +36,12 @@ const blogs = [
 const Blogs = () => {
     return (
         <Container>
-            <Row>
+            <Row className='gy-3'>
                 {
-                    blogs.map(blog => <Col sm={3} key={blog.id}>
-                        <div className="blog-card shadow">
-                            <img width='60px' src={blog.img} alt="" />
-                            <h6 className='ms-3 mt-3'>{blog.name}</h6>
-                        </div>
-                    </Col>)
+                    blogs.map(blog => <ItemDetail
+                        key={blog.id}
+                        blog={blog}
+                    />)
                 }
             </Row>
         </Container>

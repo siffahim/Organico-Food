@@ -63,7 +63,6 @@ $padding1:10px;
   top: 20%;
   right: -50px;
   transition: 0.4s;
-  z-index: 99999;
 }
 
 .food-card:hover .food-btn-container {
@@ -85,7 +84,7 @@ $padding1:10px;
 .btn-order {
   width: 40px;
   height: 40px;
-  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
+  background-color: $color2;
   color: $color1;
   display: flex;
   align-items: center;
@@ -140,23 +139,23 @@ $padding1:10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
+  background-color: $color2;
   color: $color1;
   margin-right: 20px;
   font-size: 18px;
 }
 
 .footer-container {
-  background-color: #222428;
-  color: #aa9f80;
+  background-color: $color2;
+  color: rgb(228, 226, 226);
   list-style-type: none;
   padding: 60px 50px;
 }
 
 .footer-under {
   border-top: 1px solid rgb(71, 71, 71);
-  background-color: #1d1e20;
-  color: #aa9f80;
+  background-color: #121313;
+  color: rgb(228, 226, 226);
   padding-top: 20px;
   padding-bottom: 5px;
 }
@@ -181,7 +180,7 @@ $padding1:10px;
 .btn-gallery {
   border: none;
   padding: 18px 40px;
-  background-image: linear-gradient(to bottom, #ff833f 0%, #f86c21 100%);
+  background: $color2;
   color: $color1;
   font-family: $bold;
   border-radius: $btn-radius;
@@ -209,7 +208,7 @@ $padding1:10px;
 .custom-btn2 {
   border: none;
   padding: 8px 10px;
-  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
+  background-color: $color2;
   color: $color1;
   border-radius: 5px;
 }
@@ -223,7 +222,7 @@ $padding1:10px;
 }
 
 .selectd {
-  background-image: linear-gradient(to bottom, #88d81a 0%, #5c8b1b 100%);
+  background-color: $color2;
   color: #fff;
   margin-left: 5px;
   margin-right: 5px;
@@ -295,4 +294,8 @@ $padding1:10px;
 .buy-btn {
   background-image: linear-gradient(to bottom, #ff833f 0%, #f86c21 100%);
   color: white;
+}
+
+.productNastedCard {
+  box-shadow: $box-shadow;
 }

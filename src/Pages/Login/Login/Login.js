@@ -40,7 +40,7 @@ const Login = () => {
                         <h3>Login</h3>
                         <form onSubmit={handleSubmit}>
                             <InputGroup className="mb-3">
-                                <InputGroup.Text><i class="fas fa-envelope icon2"></i></InputGroup.Text>
+                                <InputGroup.Text><i className="fas fa-envelope icon2"></i></InputGroup.Text>
                                 <FormControl
                                     placeholder="Email"
                                     type='email'
@@ -49,7 +49,7 @@ const Login = () => {
                                 />
                             </InputGroup>
                             <InputGroup className="mb-3">
-                                <InputGroup.Text><i class="fas fa-lock icon2"></i></InputGroup.Text>
+                                <InputGroup.Text><i className="fas fa-lock icon2"></i></InputGroup.Text>
                                 <FormControl
                                     placeholder="Password"
                                     type='password'

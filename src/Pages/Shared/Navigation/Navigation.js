@@ -25,7 +25,7 @@ const Navigation = () => {
                         user.email && <img style={{ width: '40px', height: '40px', marginRight: '10px', borderRadius: '50%' }} src={user.photoURL} alt="" />
                     }
                     {
-                        user.email ? <button onClick={logOut} className='btn fs-5 text-white'><i class="fas fa-sign-in-alt"></i></button> : <Nav.Link as={Link} className='text-white fs-5' to="/login"><i className="far fa-user"></i></Nav.Link>
+                        user.email ? <button onClick={logOut} className='btn fs-5 text-white'><i className="fas fa-sign-in-alt"></i></button> : <Nav.Link as={Link} className='text-white fs-5' to="/login"><i className="far fa-user"></i></Nav.Link>
                     }
                 </Nav>
             </Navbar.Collapse>

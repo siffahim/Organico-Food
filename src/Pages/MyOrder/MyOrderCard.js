@@ -32,11 +32,11 @@ const MyOrderCard = ({ order, setSum }) => {
                                 <img width='100%' src={img} alt="" />
                             </div>
                             <div className='order-btn-container'>
-                                <div className='btn-order' onClick={() => handleDelete(_id)}><i class="fas fa-trash-alt"></i></div>
+                                <div className='btn-order' onClick={() => handleDelete(_id)}><i className="fas fa-trash-alt"></i></div>
                                 {
-                                    order.payment ? <div className='btn-order' style={{ cursor: 'not-allowed' }} title='Paid product'><i class="fas fa-ban icon"></i></div> : <div className='btn-order' onClick={() => handlePayment(_id)} title='Payment for product'><i class="fab fa-cc-amazon-pay"></i></div>
+                                    order.payment ? <div className='btn-order' style={{ cursor: 'not-allowed' }} title='Paid product'><i className="fas fa-ban icon"></i></div> : <div className='btn-order' onClick={() => handlePayment(_id)} title='Payment for product'><i className="fab fa-cc-amazon-pay"></i></div>
                                 }
-                                <div className='btn-order'><i class="fas fa-tag"></i></div>
+                                <div className='btn-order'><i className="fas fa-tag"></i></div>
                             </div>
                         </div>
                     </Col>
